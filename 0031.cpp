@@ -12,8 +12,10 @@ void countpossibilities(cpp_int* count, int max, int current, int sum) {
 	}
 	if (sum > max) return;
 
-
-	countpossibilities(count, max, 200, sum+200);
+	if (current <= 200)
+	{
+		countpossibilities(count, max, 200, sum + 200);
+	}
 	if (current <= 100)
 	{
 		countpossibilities(count, max, 100, sum+100);
